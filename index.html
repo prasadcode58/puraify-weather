@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+
+    <title>Puraify Weather</title>
+</head>
+<body>
+
+    <div class="font-Itim h-[screen] w-[screen] overflow-y-hidden bg-[url('assets/bgblob.png')] bg-cover bg-center flex relative justify-center">
+        <div class="flex flex-col items-center w-[1000px] h-screen">
+            <h1 class="text-6xl font-bold text-black pt-12">
+                WEATHER APP
+            </h1>
+
+            <div class="text-lg flex justify-between w-[90%] max-w-[650px] text-black font-bold my-12">
+                <h3 class="px-4 py-1 cursor-pointer tracking-[1.75px]" id="userWeather">
+                    Your Weather
+                </h3>
+
+                <h3 class="px-4 py-1 cursor-pointer tracking-[1.75px]" id="searchWeather">
+                    Search Weather
+                </h3>
+            </div>
+
+            <div class="flex flex-col justify-center items-center" id="weatherContainer">
+                <div class="flex flex-col justify-center items-center mt-16" id="grantLocationContainer">
+                    <img class="w-[80px] h[80px] mb-8" src="assets/location.png" loading="lazy" alt="" >
+                    <p class="text-3xl font-bold mb-4">Grant location access</p>
+                    <p class="text-lg mb-6">Allow Acess to get weather Information</p>
+                    <button class="text-lg uppercase rounded-lg bg-[#B8C0D9] px-5 py-2 text-white font-bold" id="grantAcessBtn">Grant Access</button>
+                </div>
+
+                <form class="hidden w-[650px] justify-between gap-2" id="searchForm">
+                    <input class=" w-[93%] bg-[#C18BD9] text-xl py-2 rounded-md focus:outline-none focus:ring focus:ring-[#BA73D9] pl-4 placeholder:text-[#e5ecff8f] text-white caret-white" placeholder="Search for City..." type="text" id="searchInput">
+                    <button class="w-[7%]" id="searchBtn" type="submit">
+                        <img class="w-[40px] h-[40px]" src="assets/search.png" loading="lazy" alt="">
+                    </button>
+                </form>
+
+                <div class="hidden flex-col justify-center items-center mt-14" id="loadingScreen">
+                    <img class="w-[350px] h-[350px]" src="assets/loading.gif" alt="">
+                    <h3 class="text-2xl text-[#80868C] font-bold -mt-4 animate-pulse">LOADING</h3>
+                </div>
+
+                <div class="hidden flex-col" id="userInfoContainer">
+                    <div class="flex flex-col justify-center items-center mt-6" >
+                        <div class="flex gap-3 items-center mb-5">
+                            <h2 class="text-4xl font-bold" id="cityName"></h2>
+                            <img class="w-10" id="countryIcon" alt="">
+                        </div>
+    
+                        <p class="text-2xl" id="weatherDesc"></p>
+    
+                        <img class="w-24 my-2" id="weatherIcon" alt="">
+    
+                        <div class="flex gap-1 items-center text-6xl">
+                            <p id="tempInfo"></p>
+                            <p>°C</p>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="flex items-center justify-center mt-4 gap-6">
+                        <div class="w-[181px] h-[212px] flex flex-col justify-center items-center rounded-xl bg-[#c28bd9a4] border-4 border-[#BA73D9]">
+                            <img class="w-20 mb-4" src="assets/wind.png" alt="">
+                            <p class="text-3xl mb-2">windspeed</p>
+                            <div class="flex items-center gap-1 text-4xl">
+                                <p id="windSpeed"></p>
+                                <p>m/s</p>
+                            </div>
+                            
+                        </div>
+    
+                        <div class="w-[181px] h-[212px] flex flex-col justify-center items-center rounded-xl bg-[#c28bd9a4] border-4 border-[#BA73D9]">
+                            <img class="w-20 mb-4" src="assets/humidity.png" alt="">
+                            <p class="text-3xl mb-2">humidity</p>
+                            <div class="flex items-center gap-1 text-4xl">
+                                <p id="humidity"></p>
+                                <p>%</p>
+                            </div>
+                        </div>
+    
+                        <div class="w-[181px] h-[212px] flex flex-col justify-center items-center rounded-xl bg-[#c28bd9a4] border-4 border-[#BA73D9]">
+                            <img class="w-20 mb-4" src="assets/cloud.png" alt="">
+                            <p class="text-3xl mb-2">clouds</p>
+                            <div class="flex items-center gap-1 text-4xl">
+                                <p id="clouds"></p>
+                                <p>%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

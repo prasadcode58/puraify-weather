@@ -1,6 +1,6 @@
 # puraify-weather
 
-A minimal weather app to see weather of any location
+A minimal weather app to see weather of any location.
 
 # Pre-requisites
 

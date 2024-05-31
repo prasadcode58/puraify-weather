@@ -2,7 +2,7 @@
 
 A minimal weather app to see weather of any location
 
-# Pre - requisites
+# Pre-requisites
 
 this project uses,
 
@@ -15,13 +15,13 @@ this project uses,
 - [OpenWeatherMap API](https://openweathermap.org/api) (register and get your own api)
 
 
-# Running Locally,
+# Running Locally
 
 To run this project on live server, run
 
 `npm run start`
 
-# Build for deploy,
+# Build for deploy
 
 To build this file, run
 

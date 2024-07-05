@@ -14,6 +14,11 @@ this project uses,
 
 - [OpenWeatherMap API](https://openweathermap.org/api) (register and get your own api)
 
+# Install Packages
+
+To install all packages used, run
+
+`npm install i`
 
 # Running Locally
 
